@@ -25,6 +25,19 @@ function updateTime() {
             "h:mm:ss [<small>]A[</small>]"
         );
     }
+
+    // Cape Town
+    let capetownElement = document.querySelector("#capetown");
+    if (capetownElement) {
+        let capetownDateElement = capetownElement.querySelector(".date");
+        let capetownTimeElement = capetownElement.querySelector(".time");
+        let capetownTime = moment().tz("Africa/Cape Town");
+
+        capetownDateElement.innerHTML = capetownTime.format("MMMM	Do YYYY");
+        capetownTimeElement.innerHTML = capetownTime.format(
+            "h:mm:ss [<small>]A[</small>]"
+        );
+    }
 }
 
 function updateCity(event) {
